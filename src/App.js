@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import { css as cssCss } from "@emotion/css"
+import { css as reactCss } from "@emotion/react"
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p css={cssCss`
+        color: red;
+      `}>This should be red but it's not</p>
+      <p css={reactCss`
+        color: green;
+      `}>This is green, as it should be</p>
     </div>
   );
 }
